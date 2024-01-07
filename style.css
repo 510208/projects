@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-image: url('img/cover_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px; /* 設定最大寬度，根據需要調整 */
+    margin: 0 auto; /* 居中顯示 */
+}
+
+.left-content,
+.right-content {
+    flex: 1;
+}
+
+.avatar {
+    width: 50px; /* 調整頭像的寬度 */
+    height: 50px; /* 調整頭像的高度 */
+    overflow: hidden;
+    border-radius: 50%; /* 將頭像裁剪為圓形 */
+    margin-bottom: 10px; /* 可調整頭像與標題之間的距離 */
+}
+
+
+.avatar img {
+    width: 50%;
+    height: auto; /* 保持圖片比例 */
+    border-radius: 50%; /* 圓角效果 */
+}
+
+.right-content {
+    padding: 20px;
+    border-radius: 25px;
+    text-align: left;
+    background-color: #fdfdfd9c;
+}
+
+.right-content h1 {
+    margin: 0;
+    color: #000;
+}
+
+.right-content p {
+    margin-top: 10px; /* 調整新段落與標題的間距 */
+}
+
+.main-header h1 {
+    margin: 0;
+}
+
+.project-container {
+    width: 55vw;
+    max-width: 70vw;
+    margin: 50px auto;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+    background-size: cover;
+    object-fit: cover; /* 保持原始比例，填滿整個 .logo 區域 */
+    border-radius: 10px; /* 圓角效果，可根據需要調整 */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* 讓內文區塊內容換行 */
+        flex-direction: column;
+}
+
+h2, p {
+    flex-shrink: 0; /* 防止縮小 */
+}
+
+h2 {
+    color: #333;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* 讓內文區塊內容換行 */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px; /* 加入一些間距 */
+    flex-grow: 1; /* 讓按鈕根據剩餘空間等寬分佈 */
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.material-icons {
+    vertical-align: middle; /* 使 Material Icon 垂直置中 */
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+.twicon-5 {
+    font-size: 50px;
+}
+
+/* 台灣國旗樣式，可根據實際需要替換成你的圖片 */
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: transparent;
+    text-align: right;
+    padding: 1%;
+}
+
+.tw-flag {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px; /* 設定圓角的半徑，根據需要調整數值 */
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* 滾動條只在需要時出現 */
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    color: #333;
+}
+
+.hidden-text {
+    color: black;
+    background-color: gray; /* 初始背景顏色 */
+    border-radius: 5px;
+    padding: 1px 5px;
+    transition: background-color 0.2s, color 0.2s, filter 0.2s; /* 定義轉場效果，包括背景顏色、文字顏色、模糊效果 */
+    filter: blur(5px); /* 初始模糊效果 */
+}
+
+.hidden-text:hover {
+    background-color: transparent; /* 滑鼠懸停時的背景顏色 */
+    color: black; /* 滑鼠懸停時的文字顏色 */
+    filter: blur(0); /* 滑鼠懸停時取消模糊效果 */
+    text-decoration: line-through; /* 初始刪除線效果 */
+}
+
+.footer {
+    background-color: #d1d1d141;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* 媒體查詢：當螢幕寬度小於768px時調整樣式 */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* 將元素疊放在垂直方向 */
+    }
+
+    .logo {
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 10px; /* 加入一些底部間距 */
+    }
+
+    .button {
+        max-width: 100%; /* 在小屏幕時按鈕佔滿寬度 */
+    }
+
+    .project-container {
+        width: 100vw;
+        max-width: 70vw;
+        margin: 50px auto;
+    }
+}
+
+a:not(.button) {
+    color: #274029;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+a:not(.button)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #274029;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+a:not(.button):hover::after {
+    width: 95%;
+}
+
+/* 媒體查詢 - 手機版取消部分效果 */
+@media only screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* 將 flex 排列改為垂直方向 */
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+}
